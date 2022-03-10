@@ -20,7 +20,7 @@ var db = new sqlite3.Database("employee.db");
 app.use(bodyparser.urlencoded({
     extended:false
 }));
-app.use(express.static("index.html"));
+app.use(express.static(path.join(__dirname,'./main')));
 
 app.use(helmet());
 //app.use(limiter);
@@ -29,7 +29,8 @@ db.run('CREATE TABLE IF NOT EXISTS emp (id TEXT,name TEXR)');
 
 
 app.get('/', function(req,res){
-    res.sendFile(path.join(__dirname,'index.html'));
+    res.sendFile(path.join(__dirname,'./main/index.html'));
+   // res.sendFile(path.join(('index.html','../style.css')));
 });
 
 //ADD employee

@@ -14,7 +14,8 @@
     "express-rate-limit": "^6.3.0",
     "helmet": "^5.0.2",
     "knex": "^1.0.3",
-    "node-pre-gyp": "^0.17.0"
+    "node-pre-gyp": "^0.17.0",
+    "nodemon": "^2.0.15"
   },
   "description": ""
 }
